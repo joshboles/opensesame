@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var garageButton: UIButton!
     
     override func viewDidLoad() {
@@ -28,13 +29,23 @@ class ViewController: UIViewController {
     
     func checkGarageStatus() -> Bool {
         // TODO: Eventually make API call to Smarthings and return if garage is actually open or not.
-        return true
+        return false
     }
     
     func signalGarage() {
-        // Make REQUEST here to http://192.168.1.??:??
+        var request = URLRequest(url: URL(string: "XXXXXXX")!)
+        request.httpMethod = "GET"
+        let session = URLSession.shared
+        
+        session.dataTask(with: request) {data, response, err in
+            print("Entered the completionHandler")
+        }.resume()
     }
 
+    @IBAction func garageClicked(_ sender: Any) {
+        signalGarage()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

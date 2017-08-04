@@ -17,21 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOM-5t-QW8">
-                                <rect key="frame" x="74" y="254" width="227" height="158"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOM-5t-QW8">
+                                <rect key="frame" x="99.5" y="261.5" width="176" height="143"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                 <state key="normal" image="garage-closed"/>
                                 <connections>
-                                    <action selector="garageSignal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yDc-BY-b3Z"/>
+                                    <action selector="garageClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PcC-Bu-Ygi"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IOM-5t-QW8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f2Q-BH-rvh"/>
+                            <constraint firstItem="IOM-5t-QW8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vFc-Gh-GxP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="garageButton" destination="IOM-5t-QW8" id="Ldi-wk-4lm"/>
+                        <outlet property="garageButton" destination="IOM-5t-QW8" id="EB1-6m-bcp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
